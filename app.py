@@ -149,7 +149,7 @@ contract_interface = compiled_sol["contracts"]["UserData.sol"]["UserData"]
 
 # Deploy the contract
 contract = web3.eth.contract(abi=contract_interface["abi"], bytecode=contract_interface["evm"]["bytecode"]["object"])
-YOUR_ACCOUNT_ADDRESS = "0xCeAAeD4BfBC02D4267476577b83e1c41217710D3"
+YOUR_ACCOUNT_ADDRESS = "Enter Your account address from ganache"
 tx_hash = contract.constructor().transact({'from': YOUR_ACCOUNT_ADDRESS})
 tx_receipt = web3.eth.wait_for_transaction_receipt(tx_hash)
 contract_address = tx_receipt.contractAddress
@@ -279,7 +279,7 @@ def process_csv():
             'gasPrice': web3.to_wei('50', 'gwei'),
             'nonce': web3.eth.get_transaction_count(YOUR_ACCOUNT_ADDRESS),
             })
-        YOUR_PRIVATE_KEY = "0x668c5b4ca9ce2107cf13dd2d15f25cdeb92c469f0c5b6bb02ba9f5c701a2403b"
+        YOUR_PRIVATE_KEY = "Enter the private key for the account selected in ganache"
         signed_txn = web3.eth.account.sign_transaction(transaction, private_key=YOUR_PRIVATE_KEY)
         #tx_hash = web3.eth.send_raw_transaction(signed_txn.rawTransaction)
         tx_receipt = web3.eth.wait_for_transaction_receipt(tx_hash)
