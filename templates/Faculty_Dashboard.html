@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Faculty-Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/styles.min.css">
+</head>
+
+<body style="background: rgb(141,194,255);"><!-- Start: Navbar With Button -->
+    <nav class="navbar navbar-expand-md bg-body py-3" style="background: rgb(188,154,245);">
+        <div class="container"><img width="100" height="80" src="/static/assets/img/logo-white.png"><a
+                class="navbar-brand d-flex align-items-center" href="#"></a><button data-bs-toggle="collapse"
+                class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle
+                    navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav me-auto">
+                </ul>
+                <a href="{{ url_for('faculty_login') }}">
+                    <button class="btn btn-primary" type="button">LOGOUT</button>
+                </a>
+            </div>
+        </div>
+    </nav><!-- End: Navbar With Button --><!-- Start: Hero Parallax -->
+    <section><!-- Start: Parallax Background -->
+        <div data-bss-parallax-bg="true"
+            style="height: 600px;background-image: url(https://digitalsynopsis.com/wp-content/uploads/2017/07/beautiful-color-ui-gradients-backgrounds-scooter.png);background-position: center;background-size: cover;">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div
+                        class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                        <div style="max-width: 350px;">
+                            <h1 class="text-uppercase fw-bold">Certificate generator</h1>
+                            <p class="my-3"><strong>Click on the button below to generate certificates for the
+                                    students.</strong></p><a class="btn btn-primary btn-lg me-2" role="button"
+                                href="{{ url_for('fcerti') }}">Generate Certificate</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End: Parallax Background -->
+    </section><!-- End: Hero Parallax --><!-- Start: Hero Parallax -->
+    <section style="margin-top: 20px;"><!-- Start: Parallax Background -->
+        <div data-bss-parallax-bg="true"
+            style="height: 600px;background-image: url(https://digitalsynopsis.com/wp-content/uploads/2017/07/beautiful-color-ui-gradients-backgrounds-green-beach.png);background-position: center;background-size: cover;">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div
+                        class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                        <div style="max-width: 350px;">
+                            <h1 class="text-uppercase fw-bold">Marksheet generator</h1>
+                            <p class="my-3"><strong>Click on the button below to generate marksheets for the
+                                    students.</strong></p><a class="btn btn-primary btn-lg me-2" role="button"
+                                href="{{ url_for('fmarks') }}">Generate Marksheets</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End: Parallax Background -->
+    </section><!-- End: Hero Parallax --><!-- Start: Hero Parallax -->
+    <section style="margin-top: 20px;"><!-- Start: Parallax Background -->
+        <div data-bss-parallax-bg="true"
+            style="height: 600px;background-image: url(https://www.fergusonbrotherspaint.com/cdn/shop/products/40729C_800x.png?v=1635191416);background-position: center;background-size: cover;">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div
+                        class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+                        <div style="max-width: 350px;">
+                            <h1 class="text-uppercase fw-bold"><span style="color: rgb(255, 255, 255);">assi</span><span
+                                    style="color: rgb(0, 0, 0);">gn</span><span style="color: rgb(255, 255, 255);">
+                                </span>tasks to the students</h1>
+                            <p class="my-3"><strong>Click on the button below to assign tasks to the students. Assigned
+                                    tasks will be shown in the student dashboard.</strong></p><a
+                                class="btn btn-primary btn-lg me-2" role="button" href="{{ url_for('fassign') }}">Assign
+                                Tasks</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End: Parallax Background -->
+    </section><!-- End: Hero Parallax -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/Users/sarthakmore/Desktop/studies/Faculty UI/assets/js/script.min.js"></script>
+</body>
+
+</html>

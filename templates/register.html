@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="/static/assets/css/styles.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body class="bg-gradient-primary">
+    <div class="container">
+        <div class="card shadow-lg o-hidden border-0 my-5">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-flex">
+                        <div class="flex-grow-1 bg-register-image"
+                            style="background-image: url(&quot;/static/assets/img/logo-white.jpg&quot;);">
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h4 class="text-dark mb-4">Create an Account!</h4>
+                            </div>
+                            <form class="user" id="registerform">
+                                <div class="row mb-3">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user"
+                                            type="text" id="FirstName" placeholder="First Name" name="first_name"
+                                            required></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="text"
+                                            id="LastName" placeholder="Last Name" name="last_name" required></div>
+                                </div>
+                                <div class="mb-3"><input class="form-control form-control-user" type="email"
+                                        id="InputEmail" aria-describedby="emailHelp" placeholder="Email Address"
+                                        name="email" required></div>
+                                <div class="row mb-3">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user"
+                                            type="password" id="moodleid" placeholder="Moodle ID" name="password"
+                                            required></div>
+                                    <div class="col-sm-6"><input class="form-control form-control-user" type="password"
+                                            id="Password" placeholder="Enter Password" name="password_repeat" required>
+                                    </div>
+                                </div><button class="btn btn-primary d-block btn-user w-100" type="submit"
+                                    id="signup_btn">Register
+                                    Account</button>
+                                <hr>
+                                <hr>
+                            </form>
+                            <div class="text-center"><a class="small" href="{{ url_for('student_login') }}">Already have
+                                    an account?
+                                    Login!</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/script.min.js"></script>
+    <script>
+        function validateEmail() {
+            // Get the input value
+            var emailInput = document.getElementById('InputEmail').value;
+
+            // Check if the email ends with "@apsit.edu.in"
+            if (emailInput.endsWith('@apsit.edu.in')) {
+                return true; // Allow form submission
+            } else {
+                alert('Please enter a valid email ending with @apsit.edu.in');
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+    <!-- <script src="{{ url_for('static', filename='login.js') }}"  type="module"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1-0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1-0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.1-0/firebase-database.js"></script>
+    <script type="module">
+        var firebaseConfig = {
+            apiKey: "AIzaSyACLiwSCMJqqP_uK0jQBEH2gxHgciO_zNY",
+            authDomain: "edumaster-students.firebaseapp.com",
+            databaseURL: "https://edumaster-students-default-rtdb.firebaseio.com",
+            projectId: "edumaster-students",
+            storageBucket: "edumaster-students.appspot.com",
+            messagingSenderId: "805055444577",
+            appId: "1:805055444577:web:31bb3138b651393f275c20",
+            measurementId: "G-W6HM9TBKT4"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        document.getElementById("registerform").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get values from the form
+            const firstName = document.getElementById("FirstName").value;
+            const lastName = document.getElementById("LastName").value;
+            const email = document.getElementById("InputEmail").value;
+            const moodle = document.getElementById("moodleid").value;
+            const pass = document.getElementById("Password").value;
+
+            // Register the new user in Firebase Authentication
+            const signup_email = document.getElementById("InputEmail").value;
+            const signup_password = document.getElementById("Password").value;
+
+            firebase
+                .auth()
+                .createUserWithEmailAndPassword(signup_email, signup_password)
+                .then(function () {
+                    // Successfully registered user, now store details in the Realtime Database
+                    const userDetails = {
+                        firstName: firstName,
+                        lastName: lastName,
+                        email: email,
+                        moodleid: moodle,
+                        password: pass,
+                    };
+
+                    // Push the user details to the Firebase Realtime Database
+                    firebase.database().ref('users').push(userDetails)
+                        .then(() => {
+                            window.location.href = "{{ url_for('student_login') }}";
+                            document.getElementById("registerform").reset();
+                        })
+                        .catch((error) => {
+                            alert('Error adding user details to the database:', error);
+                        });
+
+                })
+                .catch(function (error) {
+                    alert("Error registering user:", error.message);
+                });
+        });
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>

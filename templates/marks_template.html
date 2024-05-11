@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marksheet Template 3rd Semester</title>
+    <style>
+        body {
+            background-color: rgb(179, 214, 246);
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <div class="box">
+                <img align="center" src="https://cache.careers360.mobi/media/colleges/social-media/8788/2018/8/7/AP-Shah-Institute-of-Technology-Thane-Logo.jpg">
+                <img align="" src="">
+                <h5>Parshvanath Charitable Trust's</h5>
+                <h2>A P SHAH INSTITUTE OF TECHNOLOGY</h2>
+                <h5>(Approved by AICTE New Delhi & Govt. of Maharashtra, Affiliated to University of Mumbai)<br>Survey
+                    No. 12,13, Opp HyperCity Mall, Kasarvadavali, G.B.Rd Thane(w)-400615<br>Tel: 25973737/38 Fax:
+                    25973739 www.apsit.edu.in</h5>
+                <h3>(ON BEHALF OF UNIVERSITY OF MUMBAI)</h3>
+                <hr>
+                <h2>GRADE CARD</h2>
+                <h3 style="text-align: right; padding-right: 130px;">College Code : 996</h3>
+                <h4 style="text-align: left; padding-left: 130px;">NAME : {{ name }}</h4>
+                <h4 style="text-align: left; padding-left: 130px;">EXAMINATION : {{examination}}</h4>
+                <h4 style="text-align: left; padding-left: 130px;">HELD IN : {{held_in}}</h4>
+                <h4 style="text-align: left; padding-left: 130px;">SEAT NUMBER : {{seat_number}}</h4>
+                <table border="1" frame="hsides" rules="cols" style="border-collapse: collapse;" align="center">
+                    <tr>
+                        <th colspan="9"></th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2" style="padding-left: 20px; padding-right: 20px; height: 40px;">COURSE CODE</th>
+                        <th rowspan="2" style="padding-left: 20px; padding-right: 20px; height: 40px;">COURSE TITLE</th>
+                        <th rowspan="2" style="padding-left: 20px; padding-right: 20px; height: 40px;">COURSE CREDITS
+                        </th>
+                        <th colspan="3" style="padding-left: 20px; padding-right: 20px; height: 40px;">GRADE</th>
+                        <th rowspan="2" style="padding-left: 20px; padding-right: 20px; height: 40px;">CREDIT EARNED (C) : {{credit_earned}}
+                        </th>
+                        <th rowspan="2" style="padding-left: 20px; padding-right: 20px; height: 40px;">GRADE POINTS (G) : {{grade_points}}
+                        </th>
+                        <th rowspan="2" style="padding-left: 20px; padding-right: 20px; height: 40px;">C X G</th>
+                    </tr>
+                    <tr>
+                        <th>
+                            <hr>ESE/PR/OR
+                        </th>
+                        <th>
+                            <hr>IA/TW
+                        </th>
+                        <th>
+                            <hr>OVERALL
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITC401
+                        </td>
+                        <td>
+                            <hr>AI DS II
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_1}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_1}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_1}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_1}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_1}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITC402
+                        </td>
+                        <td>
+                            <hr>Internet of Everything
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_2}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_2}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_2}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_2}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_2}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITC403
+                        </td>
+                        <td>
+                            <hr>Infrastructure Security
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_3}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_3}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_3}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_3}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_3}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITC404
+                        </td>
+                        <td>
+                            <hr>Information Retrieval System
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_4}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_4}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_4}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_4}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_4}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITC405
+                        </td>
+                        <td>
+                            <hr>CyberSecurity and Laws
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_5}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_5}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_5}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_5}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_5}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITl401
+                        </td>
+                        <td>
+                            <hr>Security Information Management
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_6}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_6}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_6}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_6}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_6}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITl402
+                        </td>
+                        <td>
+                            <hr>VAPT Lab
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_7}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_7}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_7}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_7}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_7}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITl403
+                        </td>
+                        <td>
+                            <hr>Data Science Lab
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_8}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_8}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_8}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_8}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_8}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITl404
+                        </td>
+                        <td>
+                            <hr>IOE Lab
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_9}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_9}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_9}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_9}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_9}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITM401
+                        </td>
+                        <td>
+                            <hr>SAD Lab
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_10}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_10}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_10}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_10}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_10}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>ITM401
+                        </td>
+                        <td>
+                            <hr>ROSPL Lab
+                        </td>
+                        <td>
+                            <hr>3
+                        </td>
+                        <td>
+                            <hr>{{grade_ESE_11}}
+                        </td>
+                        <td>
+                            <hr>{{grade_IA_11}}
+                        </td>
+                        <td>
+                            <hr>{{grade_ALL_11}}
+                        </td>
+                        <td>
+                            <hr>{{credit_earned_11}}
+                        </td>
+                        <td>
+                            <hr>{{grade_points_11}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <hr>TOTAL
+                        </td>
+                        
+                    </tr>
+                </table>
+                <h3 style="text-align: left; padding-left: 130px;">SGPI : </h3>
+                <h3 style="text-align: left; padding-left: 130px;">CGPI : {{cgpi}}</h3>
+                <h4 style="text-align: left; padding-left: 130px;">REMARK : {{remark}}</h4>
+                <h4 style="text-align: left; padding-left: 130px;">RESULT DECLARED ON : {{result_declared_on}}</h4>
+                <h4 style="text-align: left; padding-left: 130px;">MARKSHEET UID : {{marksheet_uid}}</h4>
+                <h3 style="text-align: left; padding-left: 130px;">ENTERED BY : </h3>
+                <h3 style="text-align: left; padding-left: 130px;">PRINCIPAL : </h3>
+                <div id="qrcode" style="margin-top: 20px;">
+                    <img id="qrImage" src="" alt="QR Code" style="width: 150px; height: 150px;">
+                </div>
+            </div>
+        </div>
+        </div>
+    </center>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script>
+        // Function to generate QR code
+        function generateQRCode() {
+            // Get the values of name, examination, and seat_number from the HTML template
+            var name = "{{ name }}";
+            var examination = "{{ examination }}";
+            var seat_number = "{{ seat_number }}";
+            var cgpi = "{{ cgpi }}";
+            var remark = "{{ remark }}";
+            var marksheet_uid = "{{ marksheet_uid }}";
+            
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + name + "\n" + examination + "\n" + seat_number + "\n" + cgpi + "\n" + remark + "\n" + marksheet_uid;
+        }
+
+        // Call the function to generate QR code when the page loads
+        window.onload = generateQRCode;
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+	<link rel="stylesheet" href="/static/assets/css/styles.min.css">
+</head>
+
+<body class="bg-gradient-primary">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-12 col-xl-10">
+                <div class="card shadow-lg o-hidden border-0 my-5">
+                    <div class="card-body p-0">
+                        <div class="row">
+                            <div class="col-lg-6 d-none d-lg-flex">
+                                <div class="flex-grow-1 bg-login-image"
+                                    style="background-image: url(&quot;/static/assets/img/logo-white.jpg&quot;);">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="p-5">
+                                    <div class="text-center">
+                                        <h4 class="text-dark mb-4">Welcome Back!</h4>
+                                    </div>
+                                    <form class="user">
+                                        <div class="mb-3"><input class="form-control form-control-user" type="email"
+                                                id="log_email" aria-describedby="emailHelp"
+                                                placeholder="Enter Email Address..." name="email" required></div>
+                                        <div class="mb-3"><input class="form-control form-control-user" type="password"
+                                                id="log_pwd" placeholder="Password" name="password" required></div>
+                                        <div class="mb-3">
+                                            <div class="custom-control custom-checkbox small">
+                                                <div class="form-check"><input
+                                                        class="form-check-input custom-control-input" type="checkbox"
+                                                        id="formCheck-1"><label
+                                                        class="form-check-label custom-control-label"
+                                                        for="formCheck-1">Remember Me</label></div>
+                                            </div>
+                                        </div><button class="btn btn-primary d-block btn-user w-100" id="login_btn"
+                                            type="submit">Login</button>
+                                        <hr>
+                                    </form>
+                                    <div class="text-center"><a class="small" href="{{ url_for('forgot') }}">Forgot
+                                            Password?</a></div>
+                                    <div class="text-center"><a class="small" href="{{ url_for('register') }}">Create an
+                                            Account!</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/assets/js/script.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+
+    <script type="module">
+        var firebaseConfig = {
+            apiKey: "AIzaSyACLiwSCMJqqP_uK0jQBEH2gxHgciO_zNY",
+            authDomain: "edumaster-students.firebaseapp.com",
+            databaseURL: "https://edumaster-students-default-rtdb.firebaseio.com",
+            projectId: "edumaster-students",
+            storageBucket: "edumaster-students.appspot.com",
+            messagingSenderId: "805055444577",
+            appId: "1:805055444577:web:31bb3138b651393f275c20",
+            measurementId: "G-W6HM9TBKT4"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+
+        document.getElementById("login_btn").addEventListener("click", login);
+        function login(e) {
+            e.preventDefault();
+
+            var login_email = document.getElementById("log_email").value;
+            var login_password = document.getElementById("log_pwd").value;
+
+            // Sign in with email and password
+            firebase.auth().signInWithEmailAndPassword(login_email, login_password)
+                .then(function (user) {
+                    // User is signed in
+                    alert("Logged in ");
+                    window.location.href = "{{ url_for('dashboard') }}";
+
+                })
+                .catch(function (error) {
+                    // Handle errors
+                    alert("Something went wrong please try");
+                });
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

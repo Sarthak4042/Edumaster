@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>third_uni_UI</title>
+    <link rel="stylesheet" href="/static/assets/bootstrap/css/bootstrap.min.css">
+    
+    <style>
+        .fit-cover {
+            object-fit: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-4 py-xl-5">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>GENERATE MARKSHEETS</h2>
+                <p class="w-lg-50">Select the year for which you want to generate marksheets.</p>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://img.freepik.com/free-vector/students-are-reading-books-prepare-exams-semester_1150-51077.jpg?w=1800&amp;t=st=1705580429~exp=1705581029~hmac=66dbac24c3e97bc0070e4cc6dee53f18ef5fe56d4c0889b77b742dcc4e20b1c2">
+                    <div class="py-4">
+                        <h4>3RD SEMESTER</h4>
+                        <p>Click here to generate 3rd semester's IA1, IA2 and semester exam marksheets.</p><button class="btn btn-primary" type="button" onclick="redirectToTrial()">Generate Marsksheets</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://img.freepik.com/free-vector/exams-concept-illustration_114360-2754.jpg?w=1060&amp;t=st=1705580842~exp=1705581442~hmac=d6db9cbaa7a19b428065b252489e94e6d3986ea5baf1c9cb7a2b3f1529985316">
+                    <div class="py-4">
+                        <h4>4TH SEMESTER</h4>
+                        <p>Click here to generate 4th semester's IA1, IA2 and semester exam marksheets.</p><button class="btn btn-primary" type="button" onclick="redirectToTrial2()">Generate Marksheets</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://img.freepik.com/free-photo/international-day-education-cartoon-style-with-stack-books_23-2151007465.jpg?t=st=1705580739~exp=1705584339~hmac=3544074b68159564ab053cc2baa7ed36664767c071ee29dca6959c83ff140cc1&amp;w=740">
+                    <div class="py-4">
+                        <h4>5TH SEMESTER</h4>
+                        <p>Click here to generate 5th semester's IA1, IA2 and semester exam marksheets.</p><button class="btn btn-primary" type="button" onclick="redirectToTrial3()">Generate Marksheets</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;" src="https://img.freepik.com/premium-photo/group-graduates-icon-retro-label-design-hipster-background-made-triangles-color-flow-effect_226262-1213.jpg?w=1060">
+                    <div class="py-4">
+                        <h4>6TH SEMESTER</h4>
+                        <p>Click here to generate 6th semester's IA1, IA2 and semester exam marksheets.</p><button class="btn btn-primary" type="button" onclick="redirectToTrial4()">Generate Marksheets</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/assets/js/script.min.js"></script>
+    <script>
+        // JavaScript function to redirect to trial.html
+        function redirectToTrial() {
+            window.location.href = "{{ url_for('sem3') }}";
+        }
+    </script>
+
+    <script>
+    // JavaScript function to redirect to trial.html
+        function redirectToTrial2() {
+            window.location.href = "{{ url_for('sem4') }}";
+        }
+    </script>
+
+    <script>
+    // JavaScript function to redirect to trial.html
+        function redirectToTrial3() {
+            window.location.href = "{{ url_for('sem5') }}";
+        }
+    </script>
+
+    <script>
+    // JavaScript function to redirect to trial.html
+        function redirectToTrial4() {
+            window.location.href = "{{ url_for('sem6') }}";
+        }
+    </script>
+</body>
+
+</html>

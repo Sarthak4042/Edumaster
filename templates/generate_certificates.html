@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>third_uni_UI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/css/styles.min.css">
+</head>
+
+<body><!-- Start: Projects Grid -->
+    <div class="container py-4 py-xl-5">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>GENERATE CERTIFICATES</h2>
+                <p class="w-lg-50">Upload the CSV file to generate certificates.</p>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
+                        src="https://img.freepik.com/free-photo/diploma-scroll-with-wax-seal-red-background-close-up_1142-38815.jpg?t=st=1705586205~exp=1705589805~hmac=44ed2e0e3199466fce7d4c2ecafbb4f41bb6c7ba1bd36a20f495bb2ee7224f7b&amp;w=1060">
+                    <div class="py-4">
+                        <form action="/process_certi" method="post" enctype="multipart/form-data">
+                            <h4>PARTICIPATION CERTIFICATE</h4>
+                            <p>Click here to upload CSV file containing student data to generate certificates.</p>
+                            <input type="file" name="csv_file" accept=".csv, text/csv">
+                            <button type="submit">Upload and Process</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
+                        src="https://img.freepik.com/free-photo/high-school-student-celebrates-diploma-achievement-indoors-generated-by-ai_188544-24734.jpg?t=st=1705586300~exp=1705589900~hmac=3756e8bb8e41ed798de8c58536c6e46de51504299a875944cf207323bda52dba&amp;w=1380">
+                    <div class="py-4">
+                        <form action="/process_certi" method="post" enctype="multipart/form-data">
+                            <h4>COURSE COMPLETION CERTIFICATE</h4>
+                            <p>Click here to upload CSV file containing student data to generate certificates.</p>
+                            <input type="file" name="csv_file" accept=".csv, text/csv">
+                            <button type="submit">Upload and Process</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
+                        src="https://img.freepik.com/free-photo/golden-medal-background-scroll-with-certificate-achievement_1142-59306.jpg?t=st=1705586388~exp=1705589988~hmac=87527f0226d07a666c386fa2666208f8da19bd82ad3a789aacbcf82909e4ed0a&amp;w=1060">
+                    <div class="py-4">
+                        <form action="/process_certi" method="post" enctype="multipart/form-data">
+                            <h4>APPRICIATION CERTIFICATE</h4>
+                            <p>Click here to upload CSV file containing student data to generate certificates.</p>
+                            <input type="file" name="csv_file" accept=".csv, text/csv">
+                            <button type="submit">Upload and Process</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div><img class="rounded img-fluid d-block w-100 fit-cover" style="height: 200px;"
+                        src="https://img.freepik.com/premium-photo/hand-businessman-rise-holding-golden-trophy_34683-3716.jpg?w=1800">
+                    <div class="py-4">
+                        <form action="/process_certi" method="post" enctype="multipart/form-data">
+                            <h4>WINNER CERTIFICATE</h4>
+                            <p>Click here to upload CSV file containing student data to generate certificates.</p>
+                            <input type="file" name="csv_file" accept=".csv, text/csv">
+                            <button type="submit">Upload and Process</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- End: Projects Grid -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

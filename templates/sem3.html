@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>third_uni_UI</title>
+    <link rel="stylesheet" href="/static/assets2/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets2/css/Projects-Grid-images.css">
+</head>
+
+<body>
+    <div class="container py-4 py-xl-5">
+        <div class="row mb-5">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2>Generate Marksheets</h2>
+                <p class="w-lg-50"></p>
+            </div>
+        </div>
+        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+            <div class="col">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://img.freepik.com/free-photo/hand-filling-out-questionary-form_1262-2283.jpg?w=1800&amp;t=st=1705582172~exp=1705582772~hmac=9daf482e22b8e1f89df0010a13791721da4da7aed9cf088c56744b6a385f373e">
+                    <div class="card-body p-4">
+                        <h4 class="card-title">3RD SEMESTER IA1</h4>
+                        <p class="card-text">Upload CSV file consisting of Student Data to generate marksheets.</p>
+                        <form id="semester_ia1_form" action="/process_csv" method="post" enctype="multipart/form-data">
+                            <input type="file" name="csv_file" accept=".csv, text/csv">
+                            <button type="submit">Upload and Process</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://img.freepik.com/free-photo/hand-writing-paper-with-pen_1232-1344.jpg?w=1800&amp;t=st=1705582235~exp=1705582835~hmac=8e5d1fc929f6c47f3fcaa46ccae583d9de55008f2f2de9a90ea6ec4311f7f3c6">
+                    <div class="card-body p-4">
+                        <h4 class="card-title">3RD SEMESTER IA2</h4>
+                        <p class="card-text">Upload CSV file consisting of Student Data to generate marksheets.</p>
+                        <form id="semester_ia1_form" action="/process_csv" method="post" enctype="multipart/form-data">
+                            <input type="file" name="csv_file" accept=".csv, text/csv">
+                            <button type="submit">Upload and Process</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card"><img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://img.freepik.com/premium-photo/student-doing-test-exam_53876-46243.jpg?w=1800">
+                    <div class="card-body p-4">
+                        <h4 class="card-title">SEMESTER EXAM</h4>
+                        <p class="card-text">Upload CSV file consisting of Student Data to generate marksheets.</p>
+                        <form id="semester_ia1_form" action="/process_csv" method="post" enctype="multipart/form-data">
+                            <input type="file" name="csv_file" accept=".csv, text/csv">
+                            <button type="submit">Upload and Process</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

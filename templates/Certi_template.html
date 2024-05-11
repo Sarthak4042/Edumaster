@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate Template</title>
+    <style>
+        body {
+            background-color: rgb(242, 219, 195);
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <div class="container">
+            <div class="box">
+                <img align="center" src="https://cache.careers360.mobi/media/colleges/social-media/8788/2018/8/7/AP-Shah-Institute-of-Technology-Thane-Logo.jpg">
+                <img align="" src="">
+                <h5>Parshvanath Charitable Trust's</h5>
+                <h2>A P SHAH INSTITUTE OF TECHNOLOGY</h2>
+                <h5>(Approved by AICTE New Delhi & Govt. of Maharashtra, Affiliated to University of Mumbai)<br>Survey
+                    No. 12,13, Opp HyperCity Mall, Kasarvadavali, G.B.Rd Thane(w)-400615<br>Tel: 25973737/38 Fax:
+                    25973739 www.apsit.edu.in</h5>
+                <h3>(ON BEHALF OF UNIVERSITY OF MUMBAI)</h3>
+                <hr>
+                <h1 style="font-size: 50px;">CERTIFICATE</h1>
+                <h3>OF COMPLETION</h3>
+                <h4 style="text-align: center; font-size: 30px;">A. P. SHAH INSTITUTE OF TECHNOLOGY</h4>
+                <h3>proudly awards this certificate to</h3>
+                <h1 style="font-size: 50px;">{{ name }}</h1>
+                <h3>for their outstanding completion of </h3>
+                <h1 style="font-size: 30px;">{{ course_name }}</h1>
+                <h3>from {{ from_date }} to {{ to_date }} under the guidance of </h3>
+                <h1 style="font-size: 30px;">{{ prof_name }}</h1>
+                <h3>Throughout this course the student has showcased great work ethics, leadership qualities & team player skills.</h3>
+                <img align="center" src="">
+                <h4 style="text-align: left; padding-left: 200px;">{{ instructor_signature }}</h4>
+                <h4 style="text-align: left; padding-left: 200px;">SIGNATURE OF INSTRUCTOR</h4>
+                <h4 style="text-align: right; padding-right: 200px; position: relative; top: -80px;">{{ principal_signature }}</h4>
+                <h4 style="text-align: right; padding-right: 200px; position: relative; top: -80px;">SIGNATURE OF PRINCIPAL</h4>
+                <h3>Certificate Unique ID</h3>
+                <h3>{{ certificate_uid }}</h3>
+                <div id="qrcode" style="margin-top: 20px;">
+                    <img id="qrImage" src="" alt="QR Code" style="width: 150px; height: 150px;">
+                </div>
+            </div>
+        </div>
+    </center>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script>
+        // Function to generate QR code
+        function generateQRCode() {
+            // Get the values of name, examination, and seat_number from the HTML template
+            var name = "{{ name }}";
+            var course = "{{ course_name }}";
+            var prof = "{{ prof_name }}";
+            var from = "{{ from_date }}";
+            var to = "{{ to_date }}";
+            
+            qrImage.src = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=" + name + "\n" + course + "\n" + prof + "\n" + from + "\n" + to;
+        }
+
+        // Call the function to generate QR code when the page loads
+        window.onload = generateQRCode;
+    </script>
+</body>
